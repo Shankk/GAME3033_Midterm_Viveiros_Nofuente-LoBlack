@@ -9,7 +9,8 @@ public class MainMenuBtnController : MonoBehaviour
     Canvas MainMenu;
     [SerializeField]
     Canvas Options;
-
+    [SerializeField]
+    Canvas Credits;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,18 @@ public class MainMenuBtnController : MonoBehaviour
     public void CloseOptions()
     {
         Options.GetComponent<Canvas>().enabled = false;
+        MainMenu.GetComponent<Canvas>().enabled = true;
+    }
+
+    public void OpenCredits()
+    {
+        MainMenu.GetComponent<Canvas>().enabled = false;
+        Credits.GetComponent<Canvas>().enabled = true;
+    }
+
+    public void CloseCredits()
+    {
+        Credits.GetComponent<Canvas>().enabled = false;
         MainMenu.GetComponent<Canvas>().enabled = true;
     }
 
